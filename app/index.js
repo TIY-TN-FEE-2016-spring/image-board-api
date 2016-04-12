@@ -19,7 +19,7 @@ app.singleton(`express`, expressApp);
 expressApp.use(morgan(`dev`));
 expressApp.use(bodyParser.json());
 expressApp.use(bodyParser.urlencoded({ extended: true }));
-expressApp.use(cors);
+expressApp.use(cors());
 
 
 const router = new Router(app);
