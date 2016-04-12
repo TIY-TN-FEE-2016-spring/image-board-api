@@ -9,12 +9,11 @@ export default class AppRouter extends Router {
    */
   registerRoutes() {
     this.get(`/`, `version`);
-    this.get(`/posts`, `posts/index`);
-
-
-
-    // this.resource(`/posts`, `posts`, (router) => {
-    //   router.get('/', 'index');
-    // });
+    this.get(`/images`, `images/index`);
+    this.post(`/images`, `images/create`);
+    this.get(`/images/:id`, `images/find`);
+    this.put(`/images/:id`, `images/update`);
+    this.patch(`/images/:id`, `images/update`);
+    this.delete(`/images/:id`, `images/destroy`);
   }
 }
